@@ -57,7 +57,7 @@ btnHold.addEventListener('click', function () {
 
     //2. Check if there's a winner
 
-    if (scores[activePlayers] >= 30) {
+    if (scores[activePlayers] >= 20) {
       playing = false;
       dice.classList.add('hidden');
       document
@@ -73,4 +73,8 @@ btnHold.addEventListener('click', function () {
       switchPlayer();
     }
   }
+});
+
+btnNew.addEventListener('click', function () {
+  location.reload();
 });
