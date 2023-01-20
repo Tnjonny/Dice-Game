@@ -33,6 +33,9 @@ function init() {
   players1.classList.remove('player--winner');
   players0.classList.add('player--active');
   players1.classList.remove('player--active');
+
+  document.getElementById(`name--0`).textContent = 'Player 1';
+  document.getElementById(`name--1`).textContent = 'Player 2';
 }
 init();
 
@@ -79,6 +82,9 @@ btnHold.addEventListener('click', function () {
       document
         .querySelector(`.player--${activePlayers}`)
         .classList.remove('player--active');
+
+      document.getElementById(`name--${activePlayers}`).textContent =
+        'You Won 🏆';
 
       dice.classList.add('hidden');
     } else {
