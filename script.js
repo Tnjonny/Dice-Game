@@ -34,6 +34,9 @@ function init() {
   players0.classList.add('player--active');
   players1.classList.remove('player--active');
 
+  document.querySelector(`.player--0`).classList.remove('player--loser');
+  document.querySelector(`.player--1`).classList.remove('player--loser');
+
   document.getElementById(`name--0`).textContent = 'Player 1';
   document.getElementById(`name--1`).textContent = 'Player 2';
 }
@@ -85,6 +88,15 @@ btnHold.addEventListener('click', function () {
 
       document.getElementById(`name--${activePlayers}`).textContent =
         'You Won 🏆';
+
+      // 3. Check if lost
+      if (activePlayers === 0) {
+        document.getElementById(`name--0`).textContent = 'Loser 💀';
+        document.querySelector(`.player--0`).classList.add('player--loser');
+      } else {
+        document.getElementById(`name--1`).textContent = 'Loser 💀';
+        document.querySelector(`.player--1`).classList.add('player--loser');
+      }
 
       dice.classList.add('hidden');
     } else {

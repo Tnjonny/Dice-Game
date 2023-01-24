@@ -59,7 +59,7 @@ main {
 .score {
   font-size: 8rem;
   font-weight: 300;
-  color: #c7365f;
+  color: #312d2e;
   margin-bottom: auto;
 }
 
@@ -161,9 +161,13 @@ main {
   background-color: rgb(255, 215, 0);
 }
 
+.player--loser {
+  background-color: rgb(228, 59, 59);
+}
+
 .player--winner .name {
   font-weight: 700;
-  color: #c7365f;
+  color: #2e2b2b;
 }
 
 .hidden {
