@@ -90,12 +90,9 @@ btnHold.addEventListener('click', function () {
         'You Won 🏆';
 
       // 3. Check if lost
-      if (!activePlayers) {
+      if (!scores[activePlayers]) {
         document.getElementById(`name--1`).textContent = 'Loser 💀';
         document.querySelector(`.player--1`).classList.add('player--loser');
-      } else {
-        document.getElementById(`name--0`).textContent = 'Loser 💀';
-        document.querySelector(`.player--0`).classList.add('player--loser');
       }
 
       dice.classList.add('hidden');
