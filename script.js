@@ -90,7 +90,7 @@ btnHold.addEventListener('click', function () {
         'You Won 🏆';
 
       // 3. Check if lost
-      if (activePlayers === 0) {
+      if (!activePlayers) {
         document.getElementById(`name--1`).textContent = 'Loser 💀';
         document.querySelector(`.player--1`).classList.add('player--loser');
       } else {
