@@ -91,8 +91,11 @@ btnHold.addEventListener('click', function () {
 
       // 3. Check if lost
       if (!scores[activePlayers]) {
-        document.getElementById(`name--1`).textContent = 'Loser 💀';
-        document.querySelector(`.player--1`).classList.add('player--loser');
+        document.getElementById(`name--${activePlayers}`).textContent =
+          'Loser 💀';
+        document
+          .querySelector(`.player--${activePlayers}`)
+          .classList.add('player--loser');
       }
 
       dice.classList.add('hidden');
